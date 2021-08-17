@@ -2,6 +2,7 @@
     "orgName": "workshops",
     "edition": "Developer",
     "description": "Integration Workshops",
+    "features": ["enableSetPasswordInApi"],
     "settings": {
         "chatterSettings": {
             "enableChatter": true
@@ -14,11 +15,6 @@
         },
         "mobileSettings": {
             "enableS1EncryptedStoragePref2": false
-        },
-        "securitySettings": {
-            "passwordPolicies": {
-                "enableSetPasswordInApi": true
-            }
         }
     },
     "hasSampleData": true
