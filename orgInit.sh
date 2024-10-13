@@ -1,6 +1,6 @@
-sfdx shane:org:create -f config/project-scratch-def.json -d 1 -s --json --userprefix int -o work.shop
-sfdx force:source:push
-sfdx force:user:permset:assign -n CustomerID
-sfdx shane:user:password:set -l User -g User -p sfdx1234 --json
-sfdx force:apex:execute -f scripts/CustomerIDSetup.cls
-sfdx force:org:open
+sf demoutil org create scratch -f config/project-scratch-def.json -d 5 -s -p int -e work.shop
+sf project deploy start
+sf demoutil user password set -p salesforce1 -g User -l User
+sf org assign permset -n CustomerID
+sf apex run -f scripts/CustomerIDSetup.cls
+sf org open
